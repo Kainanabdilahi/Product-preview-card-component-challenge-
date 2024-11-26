@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;700&display=swap");
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --White-color: hsl(0, 0%, 100%);
+  --bodyColor: hsl(228, 12%, 48%);
+  --titleColor: hsl(212, 21%, 14%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--Cream);
+  font-size: 14px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container .box {
+  background-color: var(--White-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 675px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container .box img {
+  width: 50%;
+}
+.container .box .contant {
+  display: flex;
+  flex-direction: column;
+}
+.container .box .contant .list {
+  padding: 10px 30px;
+}
+.container .box .contant .list .header {
+  display: block;
+  /* margin-bottom: 20px; */
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--bodyColor);
+}
+.container .box .contant .list .title h2 {
+  margin: 20px 0px;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  width: 300px;
+  color: var(--titleColor);
+}
+.container .box .contant p {
+  margin: 20px 0;
+  line-height: 1.5;
+  width: 260px;
+  color: var(--bodyColor);
+}
+.container .box .contant .prise {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.container .box .contant .prise h4 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: var(--Dark-cyan);
+}
+.container .box .contant .prise span {
+  flex: 1;
+  display: flex;
+  margin-left: 20px;
+  text-decoration: line-through;
+}
+.container .box .contant .list a {
+  display: block;
+  background-color: var(--Dark-cyan);
+  margin: 10px auto;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+.cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 0;
+  background-color: var(--Dark-cyan);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  font-weight: 700;
+}
+
+.cart-button img {
+  width: 16px !important;
+  height: 16px !important;
+  object-fit: contain;
+}
+
+.cart-button:hover {
+  background-color: hsl(158, 36%, 25%);
+}
+
+/* Responsive Section  */
+/* Small Screens  */
+
+@media (max-width: 767px) {
+  .container .box {
+    flex-direction: column;
+    width: 390px;
+  }
+
+  .container .box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .container .box .contant {
+    padding: 25px 0;
+  }
+  .container .box .contant .list {
+    padding: 0;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container .box {
+    width: 370px;
+  }
+
+  .container .box .contant {
+    padding: 25px 15px;
+  }
+  .container .box .contant .list {
+    margin: 10px 15px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .container .box .contant .list .title h2 {
+    font-size: 28px;
+    margin: 7px 10px;
+  }
+  .contant .list .header {
+    margin: 0 10px;
+  }
+  .container .box .contant p {
+    margin: 10px 10px;
+    font-size: 16px;
+  }
+  .container .box .contant .prise {
+    margin: 10px 10px;
+  }
+  .container .box .contant .list .header {
+    font-size: 14px;
+  }
+  .cart-button {
+    margin: auto;
+  }
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--mainColor);
+} */
